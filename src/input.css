@@ -5,11 +5,10 @@
     --color-second-bg: #101010;
     --color-text: white;
     --color-main: #ca0bf5;
-    --font-poppins: "Poppins", sans-serif;
+    --font-poppins: "Poppins", ui-sans-serif, system-ui;
     --shadow-main: 0 0 25px var(--color-main);
     --drop-shadow-logo: 0 0 25px var(--color-main);
 }
-
 
 html {
     @apply text-[62.5%] overflow-x-hidden;
@@ -20,7 +19,7 @@ body {
 }
 
 .header {
-    @apply fixed top-0 left-0 w-full p-[3rem_9%] bg-[#00000099] backdrop-blur-md flex justify-between z-100;
+    @apply fixed top-0 left-0 w-full p-[3rem_9%] bg-[#00000099] backdrop-blur-md flex justify-between items-center z-100;
 }
 
 .logo {
@@ -47,8 +46,6 @@ body {
     @apply text-main border-main;
 }
 
-
-
 #menuIcon {
     @apply text-6xl text-main hidden;
 }
@@ -61,19 +58,18 @@ section {
     @apply flex justify-center items-center gap-60;
 }
 
-
 .homeImage {
     @apply rounded-[50%];
 
     img {
-        @apply relative top-12 w-[40vw] rounded-full shadow-main cursor-pointer transition-all duration-400;
-        
+        @apply relative top-12 w-[40vw] rounded-full shadow-main cursor-pointer transition-all duration-400 ease-in-out;
     }
 
-}
-
-.homeImage>img:hover {
-  @apply shadow-[0_0_25px_var(--color-main),0_0_50px_var(--color-main),0_0_100px_var(--color-main)];
+    img:hover {
+        box-shadow: 0 0 25px var(--color-main),
+            0 0 50px var(--color-main),
+            0 0 100px var(--color-main);
+    }
 }
 
 #homeContent {
@@ -88,11 +84,11 @@ section {
     }
 
     h3 {
-        @apply mb-8 mt-4 text-6xl font-bold;
+        @apply mb-8 mt-4 text-6xl font-semibold w-full inline-block;
     }
 
     p {
-        @apply text-2xl font-normal text-[#ffffffc5] max-w-250 leading-8
+        @apply text-2xl font-normal text-[#ffffffc5] max-w-250 leading-8;
     }
 }
 
@@ -100,9 +96,103 @@ section {
     a {
         @apply inline-flex justify-center items-center w-18 h-18 border-2 border-main bg-transparent rounded-[25%] text-[2.5rem] text-main m-[3rem_1.5rem_3rem_0] transition-all duration-300 ease-in-out hover:text-text hover:scale-130 hover:-translate-y-[5px] hover:shadow-main hover:bg-main active:scale-95 active:translate-y-0;
     }
-
 }
 
 .btn {
-    @apply inline-block py-4 px-[2.8rem] bg-main shadow-main rounded-full text-2xl hover:shadow-[0_0_35px_#ca0bf5] hover:scale-110 active:scale-95 active:shadow-main transition-all duration-300 ease-in-out font-bold;
+    @apply inline-block py-4 px-[2.8rem] bg-main shadow-main rounded-full text-2xl hover:shadow-[0_0_35px_#ca0bf5] hover:scale-110 active:scale-95 active:shadow-main transition-all duration-300 ease-in-out font-semibold tracking-[0.1rem];
+}
+
+/* Typing Animation Section */
+.text-aimation {
+    font-size: 34px;
+    font-weight: 600;
+    min-width: 420px;
+    display: inline-block;
+
+    span {
+        position: relative;
+        white-space: nowrap;
+    }
+
+    span::before {
+        content: "";
+        color: var(--color-main);
+        animation: words 20s infinite;
+    }
+
+    span::after {
+        content: '';
+        background-color: var(--color-main-bg);
+        position: absolute;
+        width: 100%;
+        height: 120%;
+        /* স্লাশ বা বড় অক্ষর ঢাকার জন্য বাড়ানো হয়েছে */
+        border-left: 3px solid var(--color-main);
+        right: -8px;
+        top: -10%;
+        /* টেক্সটের সাথে অ্যালাইনমেন্ট ঠিক করতে */
+        animation: cursor 0.6s infinite, typing 20s steps(22) infinite;
+    }
+}
+
+@keyframes cursor {
+    to {
+        border-left: 2px solid var(--color-main);
+    }
+}
+
+@keyframes words {
+
+    0%,
+    20% {
+        content: 'front-end designer';
+    }
+
+    21%,
+    40% {
+        content: 'web designer';
+    }
+
+    41%,
+    60% {
+        content: 'UI / UX designer';
+    }
+
+    61%,
+    80% {
+        content: 'web developer';
+    }
+
+    81%,
+    100% {
+        content: 'web tester';
+    }
+}
+
+@keyframes typing {
+
+    10%,
+    15%,
+    30%,
+    35%,
+    50%,
+    55%,
+    70%,
+    75%,
+    90%,
+    95% {
+        width: 0;
+    }
+
+    5%,
+    20%,
+    25%,
+    40%,
+    45%,
+    60%,
+    65%,
+    80%,
+    85% {
+        width: calc(100% + 8px);
+    }
 }
