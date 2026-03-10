@@ -98,11 +98,11 @@ section {
 
 #social-icons {
     a {
-        @apply inline-flex justify-center items-center w-18 h-18 border-2 border-main bg-transparent rounded-[25%] text-[2.5rem] text-main m-[3rem_1.5rem_3rem_0] transition-all duration-300 ease-in-out hover:text-text hover:scale-130 hover:-translate-y-1.25 hover:shadow-main hover:bg-main active:scale-95;
+        @apply inline-flex justify-center items-center w-18 h-18 border-2 border-main bg-transparent rounded-[25%] text-[2.5rem] text-main m-[3rem_1.5rem_3rem_0] transition-all duration-300 ease-in-out hover:text-text hover:scale-130 hover:-translate-y-[5px] hover:shadow-main hover:bg-main active:scale-95 active:translate-y-0;
     }
 
 }
 
 .btn {
-    @apply inline-block py-4 px-[2.8rem] bg-main shadow-main rounded-full text-2xl hover:shadow-[0_0_35px_#ca0bf5] hover:scale-105 active:scale-100 active:shadow-main transition-all duration-300 ease-in-out;
+    @apply inline-block py-4 px-[2.8rem] bg-main shadow-main rounded-full text-2xl hover:shadow-[0_0_35px_#ca0bf5] hover:scale-110 active:scale-95 active:shadow-main transition-all duration-300 ease-in-out font-bold;
 }
