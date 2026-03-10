@@ -1,0 +1,108 @@
+@import "tailwindcss";
+
+@theme {
+    --color-main-bg: #080808;
+    --color-second-bg: #101010;
+    --color-text: white;
+    --color-main: #ca0bf5;
+    --font-poppins: "Poppins", sans-serif;
+    --shadow-main: 0 0 25px var(--color-main);
+    --drop-shadow-logo: 0 0 25px var(--color-main);
+}
+
+
+html {
+    @apply text-[62.5%] overflow-x-hidden;
+}
+
+body {
+    @apply font-poppins bg-main-bg text-text;
+}
+
+.header {
+    @apply fixed top-0 left-0 w-full p-[3rem_9%] bg-[#00000099] backdrop-blur-md flex justify-between z-100;
+}
+
+.logo {
+    @apply text-5xl font-extrabold text-text transition-all duration-300 ease-in-out cursor-pointer capitalize;
+}
+
+.logo:hover {
+    @apply scale-110;
+}
+
+.logo:active {
+    @apply scale-95;
+}
+
+.logo span {
+    @apply drop-shadow-logo text-main;
+}
+
+.navbar a {
+    @apply text-3xl text-text ml-16 capitalize font-medium transition-all duration-300 ease-in border-b-[3px] border-transparent hover:text-main hover:border-main active:scale-105;
+}
+
+.navbar .active {
+    @apply text-main border-main;
+}
+
+
+
+#menuIcon {
+    @apply text-6xl text-main hidden;
+}
+
+section {
+    @apply min-h-screen p-[10rem_9%_10rem];
+}
+
+#home {
+    @apply flex justify-center items-center gap-60;
+}
+
+
+.homeImage {
+    @apply rounded-[50%];
+
+    img {
+        @apply relative top-12 w-[40vw] rounded-full shadow-main cursor-pointer transition-all duration-400;
+        
+    }
+
+}
+
+.homeImage>img:hover {
+  @apply shadow-[0_0_25px_var(--color-main),0_0_50px_var(--color-main),0_0_100px_var(--color-main)];
+}
+
+#homeContent {
+    @apply flex flex-col items-baseline text-left justify-center mt-12;
+
+    h1 {
+        @apply font-bold text-[7rem] mt-6;
+
+        span {
+            @apply text-main;
+        }
+    }
+
+    h3 {
+        @apply mb-8 mt-4 text-6xl font-bold;
+    }
+
+    p {
+        @apply text-2xl font-normal text-[#ffffffc5] max-w-250 leading-8
+    }
+}
+
+#social-icons {
+    a {
+        @apply inline-flex justify-center items-center w-18 h-18 border-2 border-main bg-transparent rounded-[25%] text-[2.5rem] text-main m-[3rem_1.5rem_3rem_0] transition-all duration-300 ease-in-out hover:text-text hover:scale-130 hover:-translate-y-1.25 hover:shadow-main hover:bg-main active:scale-95;
+    }
+
+}
+
+.btn {
+    @apply inline-block py-4 px-[2.8rem] bg-main shadow-main rounded-full text-2xl hover:shadow-[0_0_35px_#ca0bf5] hover:scale-105 active:scale-100 active:shadow-main transition-all duration-300 ease-in-out;
+}
