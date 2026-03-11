@@ -496,16 +496,19 @@ section {
   font-weight: 600;
   min-width: 420px;
   display: inline-block;
-  span {
+  .text-prefix {
+    color: var(--color-text);
+  }
+  .animated-role {
     position: relative;
     white-space: nowrap;
   }
-  span::before {
+  .animated-role::before {
     content: "";
     color: var(--color-main);
     animation: words 20s infinite;
   }
-  span::after {
+  .animated-role::after {
     content: '';
     background-color: var(--color-main-bg);
     position: absolute;
@@ -524,19 +527,19 @@ section {
 }
 @keyframes words {
   0%, 20% {
-    content: 'front-end designer';
+    content: 'Front-End Designer';
   }
   21%, 40% {
-    content: 'web designer';
+    content: 'Web Designer';
   }
   41%, 60% {
-    content: 'UI / UX designer';
+    content: 'UI / UX Designer';
   }
   61%, 80% {
-    content: 'web developer';
+    content: 'Web Developer';
   }
   81%, 100% {
-    content: 'web tester';
+    content: 'Web Tester';
   }
 }
 @keyframes typing {
@@ -671,7 +674,13 @@ section {
     margin-inline: 4%;
   }
   .text-aimation {
-    min-width: 260px;
+    display: flex;
+    min-width: 100%;
+    flex-direction: column;
+    gap: calc(var(--spacing) * 2);
+  }
+  .text-aimation .animated-role {
+    display: inline-block;
   }
   .homeImage img {
     width: 78vw;
