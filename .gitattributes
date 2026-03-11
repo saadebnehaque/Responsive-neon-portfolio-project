@@ -1,0 +1,3 @@
+# Compiled artifact: always regenerate from src/input.css
+src/output.css linguist-generated=true
+src/output.css merge=ours

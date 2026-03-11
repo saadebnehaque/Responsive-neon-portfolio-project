@@ -365,7 +365,7 @@ section {
     margin-bottom: calc(var(--spacing) * 8);
     display: inline-block;
     width: 100%;
-    font-size: clamp(3.2rem, 5vw, 6rem);
+
     --tw-font-weight: var(--font-weight-semibold);
     font-weight: var(--font-weight-semibold);
   }
@@ -495,13 +495,16 @@ section {
   font-size: 34px;
   font-weight: 600;
   min-width: 420px;
-  display: inline-block;
+
   .text-prefix {
     color: var(--color-text);
   }
   .animated-role {
     position: relative;
     white-space: nowrap;
+    display: inline-block;
+    min-width: 18ch;
+    min-height: 1.2em;
   }
   .animated-role::before {
     content: "";
@@ -644,7 +647,15 @@ section {
     text-align: center;
   }
   .text-aimation {
-    min-width: 300px;
+    display: flex;
+    min-width: 100%;
+    flex-direction: column;
+    align-items: center;
+    gap: calc(var(--spacing) * 2);
+    white-space: normal;
+  }
+  .text-aimation .animated-role {
+    text-align: center;
   }
   .homeImage img {
     top: calc(var(--spacing) * 0);
@@ -669,18 +680,7 @@ section {
   }
   #homeContent h3 {
     font-size: 3.8rem;
-  }
-  .navbar {
-    margin-inline: 4%;
-  }
-  .text-aimation {
-    display: flex;
-    min-width: 100%;
-    flex-direction: column;
-    gap: calc(var(--spacing) * 2);
-  }
-  .text-aimation .animated-role {
-    display: inline-block;
+
   }
   .homeImage img {
     width: 78vw;

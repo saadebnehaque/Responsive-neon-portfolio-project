@@ -88,7 +88,7 @@ section {
     }
 
     h3 {
-        @apply mb-8 mt-4 text-[clamp(3.2rem,5vw,6rem)] font-semibold w-full inline-block;
+
     }
 
     p {
@@ -113,7 +113,10 @@ section {
     font-size: 34px;
     font-weight: 600;
     min-width: 420px;
-    display: inline-block;
+    display: inline-flex;
+    align-items: baseline;
+    gap: 0.8rem;
+    white-space: nowrap;
 
     .text-prefix {
         @apply text-text;
@@ -122,6 +125,9 @@ section {
     .animated-role {
         position: relative;
         white-space: nowrap;
+        display: inline-block;
+        min-width: 18ch;
+        min-height: 1.2em;
     }
 
     .animated-role::before {
@@ -283,7 +289,12 @@ section {
     }
 
     .text-aimation {
-        min-width: 300px;
+        @apply min-w-full flex flex-col items-center gap-2;
+        white-space: normal;
+    }
+
+    .text-aimation .animated-role {
+        @apply text-center;
     }
 
     .homeImage img {
@@ -310,19 +321,7 @@ section {
 
     #homeContent h3 {
         @apply text-[3.8rem];
-    }
 
-    .navbar {
-        @apply mx-[4%];
-    }
-
-    .text-aimation {
-        @apply min-w-full flex flex-col gap-2;
-    }
-
-    .text-aimation .animated-role {
-        @apply inline-block;
-    }
 
 
     .homeImage img {
