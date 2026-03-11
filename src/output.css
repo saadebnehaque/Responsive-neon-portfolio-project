@@ -506,7 +506,7 @@ section {
     position: relative;
     white-space: nowrap;
     display: inline-block;
-    width: 18ch;
+    min-width: 18ch;
     min-height: 1.2em;
   }
   .animated-role::before {
