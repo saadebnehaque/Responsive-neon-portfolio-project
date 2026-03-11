@@ -365,7 +365,7 @@ section {
     margin-bottom: calc(var(--spacing) * 8);
     display: inline-block;
     width: 100%;
-    font-size: clamp(2.6rem, 3.8vw, 4.4rem);
+
     --tw-font-weight: var(--font-weight-semibold);
     font-weight: var(--font-weight-semibold);
   }
@@ -495,10 +495,7 @@ section {
   font-size: 34px;
   font-weight: 600;
   min-width: 420px;
-  display: inline-flex;
-  align-items: baseline;
-  gap: 0.8rem;
-  white-space: nowrap;
+
   .text-prefix {
     color: var(--color-text);
   }
@@ -683,9 +680,7 @@ section {
   }
   #homeContent h3 {
     font-size: 3.8rem;
-  }
-  .navbar {
-    margin-inline: 4%;
+
   }
   .homeImage img {
     width: 78vw;

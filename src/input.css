@@ -88,7 +88,7 @@ section {
     }
 
     h3 {
-        @apply mb-8 mt-4 text-[clamp(2.6rem,3.8vw,4.4rem)] font-semibold w-full inline-block;
+
     }
 
     p {
@@ -321,11 +321,6 @@ section {
 
     #homeContent h3 {
         @apply text-[3.8rem];
-    }
-
-    .navbar {
-        @apply mx-[4%];
-    }
 
 
 
