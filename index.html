@@ -21,7 +21,8 @@
     <header class="header">
         <a href="#home" class="logo">saad <span>ebne huq</span></a>
 
-        <i class="fa-solid fa-bars" id="menuIcon"></i>
+        <input type="checkbox" id="navToggle" aria-label="Toggle navigation menu">
+        <label for="navToggle" class="fa-solid fa-bars" id="menuIcon" aria-hidden="true"></label>
 
         <nav class="navbar">
             <a href="#home" class="active">home</a>
@@ -38,7 +39,7 @@
         </div>
         <div id="homeContent">
             <h1>Hi, it's <span>Saad</span></h1>
-            <h3 class="text-aimation">I'm a <span></span></h3>
+            <h3 class="text-aimation"><span class="text-prefix">I'm a</span> <span class="animated-role"></span></h3>
             <p>A passionate Front-End Developer dedicated to crafting visually stunning and highly functional web
                 experiences. I specialize in building responsive, user-centric interfaces using modern technologies like
                 React and Tailwind CSS. My goal is to turn complex problems into elegant, high-performance digital
